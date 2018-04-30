@@ -9,6 +9,7 @@ MOSTLYCLEANFILES = \
 	gtk-3.0/gtk-contained-dark.css
 
 themedir = $(datadir)/themes/Minions
+icondir = $(datadir)/icons/Minions
 SASS = sass
 
 all: clean compile
@@ -24,6 +25,10 @@ install-data-hook:
 	$(MKDIR_P)				$(DESTDIR)$(themedir)
 	$(MKDIR_P)				$(DESTDIR)$(themedir)/gtk-3.0
 
+	$(MKDIR_P)				$(DESTDIR)$(icondir)/22x22/places
+	$(MKDIR_P)				$(DESTDIR)$(icondir)/32x32/places
+	$(MKDIR_P)				$(DESTDIR)$(icondir)/64x64/places
+
 	cp -r $(srcdir)/gtk-2.0			$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/gtk-3.0			$(DESTDIR)$(themedir)
 #	cp    $(srcdir)/gtk-3.0/gtk.css		$(DESTDIR)$(themedir)/gtk-3.0
@@ -36,6 +41,18 @@ install-data-hook:
 	cp -r $(srcdir)/xfwm4			$(DESTDIR)$(themedir)
 	cp    $(srcdir)/index.theme		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/plank			$(DESTDIR)$(themedir)
+	cp    $(srcdir)/start-here.png	$(DESTDIR)$(icondir)/64x64/places
+	ln -fs $(DESTDIR)$(icondir)/64x64/places $(DESTDIR)$(icondir)/32x32/places
+	ln -fs $(DESTDIR)$(icondir)/64x64/places $(DESTDIR)$(icondir)/22x22/places
+	cp    $(srcdir)/icon.theme      $(DESTDIR)$(icondir)/index.theme
+	gtk-update-icon-cache $(DESTDIR)$(icondir)
+
+activate:
+#	Hardcore switch for testing
+	sed -i "s/^button-icon=.*$$/button-icon=start-here/" ~/.config/xfce4/panel/whiskermenu-8.rc
+	xfconf-query -c xsettings -p /Net/IconThemeName -s "Minions"
+	xfconf-query -c xsettings -p /Net/ThemeName -s "Minions"
+	xfce4-panel -r
 
 uninstall-hook:
 	test -e $(DESTDIR)$(themedir) && rm -rfv $(DESTDIR)$(themedir)
