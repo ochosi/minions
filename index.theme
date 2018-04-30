@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Greybird
-Comment=Greybird theme
+Name=Minions
+Comment=Minions and fluffy unicorns theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Greybird
 MetacityTheme=Greybird
-IconTheme=elementary-xfce-dark
+IconTheme=Minions
 CursorTheme=DMZ-White
 ButtonLayout=:minimize,maximize,close
