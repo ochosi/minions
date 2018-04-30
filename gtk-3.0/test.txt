@@ -1,0 +1,153 @@
+  .gtkstyle-fallback:selected {
+  .view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected,
+  .view text:selected:focus,
+  iconview text:selected:focus,
+  textview text:selected:focus,
+  .view text:selected,
+  iconview text:selected,
+  textview text:selected {
+  flowbox flowboxchild:selected {
+row:selected
+  row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(disabled), row:selected
+    row:selected button.sidebar-button:not(:active):not(:checked):not(:hover):not(disabled):backdrop, row:selected
+    *:selected *:link:visited, *:selected button:visited:link,
+    *:selected button:visited {
+    *:selected *:link:hover, *:selected button:hover:link,
+    *:selected button:hover:visited {
+    *:selected *:link:active, *:selected button:active:link,
+    *:selected button:active:visited {
+  button:backdrop:backdrop:hover:visited, *:link:backdrop:backdrop:hover:selected, button:backdrop:backdrop:hover:selected:link,
+  button:backdrop:backdrop:hover:selected:visited, .selection-mode.titlebar:not(headerbar) .subtitle:backdrop:backdrop:hover:link,
+  .error button:visited, *:link:selected, button:selected:link,
+  button:selected:visited, .selection-mode.titlebar:not(headerbar) .subtitle:link,
+  headerbar.selection-mode .subtitle:link, *:selected *:link, *:selected button:link,
+  *:selected button:visited {
+  treeview.view:selected:focus, treeview.view:selected {
+  treeview.view:selected:backdrop, treeview.view:selected {
+    treeview.view:disabled:selected {
+      treeview.view:disabled:selected:backdrop {
+    treeview.view.expander:selected {
+      treeview.view.expander:selected:hover {
+      treeview.view.expander:selected:backdrop {
+    treeview.view.progressbar:selected:focus, treeview.view.progressbar:selected {
+      treeview.view.progressbar:selected:focus:backdrop, treeview.view.progressbar:selected:backdrop {
+    treeview.view.trough:selected:focus, treeview.view.trough:selected {
+  treeview.view button.dnd:active, treeview.view button.dnd:selected, treeview.view button.dnd:hover, treeview.view button.dnd,
+  treeview.view header.button.dnd:selected,
+  row:selected switch {
+    row:selected switch:backdrop {
+    row:selected switch.slider:dir(rtl) {
+    row:selected switch.slider:dir(ltr) {
+    row:selected switch.slider:checked, row:selected switch.slider {
+  row:selected check, row:selected
+treeview.view radio:selected:focus, treeview.view radio:selected,
+  treeview.view radio:checked:selected,
+  treeview.view radio:indeterminate:selected,
+treeview.view check:selected:focus, treeview.view check:selected,
+treeview.view radio:selected:focus,
+treeview.view radio:selected {
+treeview.view check:selected:disabled,
+treeview.view radio:selected:disabled {
+  treeview.view check:selected:disabled:backdrop,
+  treeview.view radio:selected:disabled:backdrop {
+treeview.view check:backdrop:selected, treeview.view check:backdrop,
+treeview.view radio:backdrop:selected,
+  row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill, row:selected progressbar trough, progressbar row:selected trough {
+    row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill, row:selected progressbar trough, progressbar row:selected trough, row:selected scale trough:disabled, scale row:selected trough:disabled, row:selected scale fill:disabled, scale row:selected fill:disabled, row:selected progressbar trough:disabled, progressbar row:selected trough:disabled {
+  row:selected scale highlight:disabled, scale row:selected highlight:disabled, row:selected progressbar progress:disabled, progressbar row:selected progress:disabled, row:selected scale highlight, scale row:selected highlight, row:selected progressbar progress, progressbar row:selected progress {
+    row:selected scale slider, row:selected scale slider:disabled {
+  row.activatable:selected:active {
+  row.activatable:selected.has-open-popup, row.activatable:selected:hover {
+  row.activatable:selected:backdrop {
+  calendar:selected {
+    .sidebar row:selected, .sidebar row:selected:focus,
+    .sidebar treeview:selected,
+    .sidebar treeview:selected:focus {
+      .sidebar row:selected label, .sidebar row:selected:focus label,
+      .sidebar treeview:selected label,
+      .sidebar treeview:selected:focus label {
+        .sidebar row:selected label:backdrop, .sidebar row:selected:focus label:backdrop,
+        .sidebar treeview:selected label:backdrop,
+        .sidebar treeview:selected:focus label:backdrop {
+      .sidebar row:selected:backdrop, .sidebar row:selected:focus:backdrop,
+      .sidebar treeview:selected:backdrop,
+      .sidebar treeview:selected:focus:backdrop {
+    .sidebar row .view:selected, .sidebar row iconview:selected, .sidebar row .view:selected:focus, .sidebar row iconview:selected:focus,
+    .sidebar treeview .view:selected,
+    .sidebar treeview iconview:selected,
+    .sidebar treeview .view:selected:focus,
+    .sidebar treeview iconview:selected:focus {
+  placessidebar row:selected {
+    placessidebar row:backdrop:selected {
+  placessidebar row:selected:active {
+    placessidebar row:drop(active):not(:disabled):selected {
+  paned > separator:selected {
+  .info label:selected:focus, .info label:selected:hover, .info label:selected,
+  .question label:selected:focus,
+  .question label:selected:hover,
+  .question label:selected,
+  .warning label:selected:focus,
+  .warning label:selected:hover,
+  .warning label:selected,
+  .error label:selected:focus,
+  .error label:selected:hover,
+  .error label:selected {
+row:selected colorswatch {
+.view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected,
+.view text:selected:focus,
+iconview text:selected:focus,
+textview text:selected:focus,
+.view text:selected,
+iconview text:selected,
+textview text:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
+textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
+entry selection, modelbutton.flat:selected, popover.background checkbutton:selected,
+popover.background radiobutton:selected,
+.menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected {
+  row:selected label, label:selected, .selection-mode button.titlebutton, .view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected,
+  .view text:selected:focus,
+  iconview text:selected:focus,
+  textview text:selected:focus,
+  .view text:selected,
+  iconview text:selected,
+  textview text:selected, .view text selection:focus, iconview text selection:focus, .view text selection, iconview text selection,
+  textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
+  entry selection, modelbutton.flat:selected, popover.background checkbutton:selected,
+  popover.background radiobutton:selected,
+  .menuitem.button.flat:selected, treeview.view:selected:focus, treeview.view:selected, row:selected, calendar:selected {
+    row:selected label:disabled, label:disabled:selected, .selection-mode button.titlebutton:disabled, iconview:disabled:selected:focus, .view:disabled:selected, iconview:disabled:selected,
+    iconview text:disabled:selected:focus,
+    textview text:disabled:selected:focus,
+    .view text:disabled:selected,
+    iconview text:disabled:selected,
+    textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled,
+    textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled,
+    entry selection:disabled, modelbutton.flat:disabled:selected, popover.background checkbutton:disabled:selected,
+    popover.background radiobutton:disabled:selected,
+    .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected {
+    row:selected label:backdrop, label:backdrop:selected, .selection-mode button.titlebutton:backdrop, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected,
+    iconview text:backdrop:selected:focus,
+    textview text:backdrop:selected:focus,
+    .view text:backdrop:selected,
+    iconview text:backdrop:selected,
+    textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop,
+    textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, label:backdrop selection, spinbutton:not(.vertical) selection:backdrop,
+    entry selection:backdrop, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
+    popover.background radiobutton:backdrop:selected,
+    .menuitem.button.flat:backdrop:selected, row:backdrop:selected, calendar:backdrop:selected {
+      row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .selection-mode button.titlebutton:backdrop:disabled, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected,
+      .view text:backdrop:disabled:selected,
+      iconview text:backdrop:disabled:selected,
+      textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled,
+      textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, label:disabled selection:backdrop, label:backdrop selection:disabled, spinbutton:not(.vertical) selection:backdrop:disabled,
+      entry selection:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected, popover.background checkbutton:backdrop:disabled:selected,
+      popover.background radiobutton:backdrop:disabled:selected,
+      .menuitem.button.flat:backdrop:disabled:selected, row:backdrop:disabled:selected, calendar:backdrop:disabled:selected {
+@define-color theme_selected_bg_color #398ee7;
+@define-color theme_selected_fg_color #ffffff;
+@define-color theme_unfocused_selected_bg_color #398ee7;
+@define-color theme_unfocused_selected_fg_color #ffffff;
+wnck-pager:selected {
+.conversation-frame .view.cell:selected, .conversation-frame iconview.cell:selected,
+.conversation-frame .view.cell:selected:focus,
+.conversation-frame iconview.cell:selected:focus {
