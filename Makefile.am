@@ -35,7 +35,6 @@ install-data-hook:
 	cp -r $(srcdir)/xfce-notify-4.0		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/xfwm4			$(DESTDIR)$(themedir)
 	cp    $(srcdir)/index.theme		$(DESTDIR)$(themedir)
-	cp    $(srcdir)/ubiquity-panel-bg.png	$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/plank			$(DESTDIR)$(themedir)
 
 uninstall-hook:
