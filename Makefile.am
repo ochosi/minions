@@ -41,7 +41,7 @@ install-data-hook:
 	cp -r $(srcdir)/xfwm4			$(DESTDIR)$(themedir)
 	cp    $(srcdir)/index.theme		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/plank			$(DESTDIR)$(themedir)
-	cp    $(srcdir)/start-here.png	$(DESTDIR)$(icondir)/64x64/places
+	cp    $(srcdir)/icons/places/64/start-here.png	$(DESTDIR)$(icondir)/64x64/places
 	ln -fs $(DESTDIR)$(icondir)/64x64/places $(DESTDIR)$(icondir)/32x32/places
 	ln -fs $(DESTDIR)$(icondir)/64x64/places $(DESTDIR)$(icondir)/22x22/places
 	cp    $(srcdir)/icon.theme      $(DESTDIR)$(icondir)/index.theme
