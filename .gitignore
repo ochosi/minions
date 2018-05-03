@@ -9,3 +9,4 @@ configure
 install-sh
 missing
 *.swp
+*.retry
