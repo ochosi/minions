@@ -8,47 +8,50 @@
     display: ":0.0"
     default_theme: "Greybird"
     default_icon_theme: "elementary-xfce-dark"
+    local_changes_bool: "{{local_changes|default(false)|bool}}"
+    deactivate_bool: "{{deactivate|default(false)|bool}}"
+    activate: "{{not deactivate_bool}}"
   tasks:
     - name: get code
       git:
         dest: "{{ git_dir }}"
         repo: 'https://github.com/ochosi/minions.git'
-      when: deactivate is not defined
+      when: activate and not local_changes_bool
     - name: compile
       shell: ./autogen.sh && make
       args:
         chdir: "{{git_dir}}"
-      when: deactivate is not defined
+      when: activate
     - name: install
       become: true
       shell: "make -C {{git_dir}} install"
-      when: deactivate is not defined
+      when: activate
     - name: Set whiskermenu to Minion
       lineinfile:
         path: "{{config_file}}"
         regexp: '^button-icon=.*$'
         line: 'button-icon=start-here'
-      when: deactivate is not defined
+      when: activate
     - name: Set whiskermenu to default
       lineinfile:
         path: "{{config_file}}"
         regexp: '^button-icon=.*$'
         line: 'button-icon=xubuntu-logo-menu'
-      when: deactivate is defined
+      when: not activate
 
     - name: Set Minion theme
       shell: xfconf-query -c xsettings -p /Net/ThemeName -s "Minions"
-      when: deactivate is not defined
+      when: activate
     - name: Set default theme
       shell: xfconf-query -c xsettings -p /Net/ThemeName -s "{{default_theme}}"
-      when: deactivate is defined
+      when: not activate
 
     - name: Set Minion theme
       shell: xfconf-query -c xsettings -p /Net/IconThemeName -s "Minions"
-      when: deactivate is not defined
+      when: activate
     - name: Set default theme
       shell: xfconf-query -c xsettings -p /Net/IconThemeName -s "{{default_icon_theme}}"
-      when: deactivate is defined
+      when: not activate
 
     - name: activate
       shell: xfce4-panel -r
