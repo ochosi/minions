@@ -307,7 +307,7 @@ entry {
 
       &:hover { color: $fg_color; }
 
-      &:active { color: $selected_bg_color; }
+      &:active { color: shade($selected_bg_color, 0.9); }
 
       &:backdrop { color: mix($backdrop_fg_color, $backdrop_base_color, 80%); }
     }
@@ -637,7 +637,7 @@ button {
   }
 
   // Suggested and Destructive Action buttons
-  @each $b_type, $b_color in (suggested-action, $selected_bg_color),
+  @each $b_type, $b_color in (suggested-action, shade($selected_bg_color, 0.9)),
                              (destructive-action, $destructive_color) {
     &.#{$b_type} {
       @include button(normal, $b_color, white);
