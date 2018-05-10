@@ -1,10 +1,10 @@
 # Author: Simon Steinbeiß
-# Theme: Greybird
-# based on "Bluebird" by Simon Steinbeiß and Pasi Lallinaho
+# Theme: Minions
+# based on "Greybird" by Simon Steinbeiß and Pasi Lallinaho
 # Description: As is the original theme, this theme is 100% free and open source.
 
-gtk-color-scheme	= "bg_color:#CECECE\nselected_bg_color:#fbd43b\nbase_color:#fcfcfc" # Background, base.
-gtk-color-scheme	= "fg_color:#3C3C3C\nselected_fg_color:#5d5854\ntext_color:#212121" # Foreground, text.
+gtk-color-scheme	= "bg_color:#e4e2e3\nselected_bg_color:#fbd43b\nbase_color:#fcfcfc" # Background, base.
+gtk-color-scheme	= "fg_color:#3C3C3C\nselected_fg_color:#5d5854\ntext_color:#2a2f35" # Foreground, text.
 gtk-color-scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
 gtk-color-scheme	= "link_color:#d0ab15" # Hyperlinks
 gtk-color-scheme	= "panel_bg:#686868" # Panel bg color
