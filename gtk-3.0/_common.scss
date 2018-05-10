@@ -637,10 +637,10 @@ button {
   }
 
   // Suggested and Destructive Action buttons
-  @each $b_type, $b_color in (suggested-action, shade($selected_bg_color, 0.9)),
-                             (destructive-action, $destructive_color) {
+  @each $b_type, $b_color, $b_fgcolor in (suggested-action, $selected_bg_color, $selected_fg_color),
+                             (destructive-action, $destructive_color, white) {
     &.#{$b_type} {
-      @include button(normal, $b_color, white);
+      @include button(normal, $b_color, $b_fgcolor);
 
       &.flat {
         @include button(undecorated);
@@ -648,23 +648,23 @@ button {
         color: $b_color; //FIXME: does it work on the dark variant?
       }
 
-      &:hover { @include button(hover, $b_color, white); }
+      &:hover { @include button(hover, $b_color, $b_fgcolor); }
 
       &:active,
-      &:checked { @include button(active, $b_color, white); }
+      &:checked { @include button(active, $b_color, $b_fgcolor); }
 
       &:backdrop,
       &.flat:backdrop {
-        @include button(backdrop, $b_color, white);
+        @include button(backdrop, $b_color, $b_fgcolor);
 
         &:active,
-        &:checked { @include button(backdrop-active, $b_color, white); }
+        &:checked { @include button(backdrop-active, $b_color, $b_fgcolor); }
 
         &:disabled {
           @include button(backdrop-insensitive);
 
           &:active,
-          &:checked { @include button(backdrop-insensitive-active, $b_color, white); }
+          &:checked { @include button(backdrop-insensitive-active, $b_color, $b_fgcolor); }
         }
       }
 
@@ -677,10 +677,10 @@ button {
       }
 
       &:disabled {
-        @include button(insensitive, $b_color, white);
+        @include button(insensitive, $b_color, $b_fgcolor);
 
         &:active,
-        &:checked { @include button(insensitive-active, $b_color, white); }
+        &:checked { @include button(insensitive-active, $b_color, $b_fgcolor); }
       }
 
       .osd & {

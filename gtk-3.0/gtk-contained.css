@@ -258,7 +258,7 @@ entry {
       color: #3c3c3c; }
     spinbutton:not(.vertical) image:active,
     entry image:active {
-      color: #fbd43b; }
+      color: shade(#fbd43b, 0.9); }
     spinbutton:not(.vertical) image:backdrop,
     entry image:backdrop {
       color: #9c9c9c; }
@@ -743,8 +743,8 @@ button {
       -gtk-icon-shadow: none;
       outline-color: rgba(238, 238, 238, 0.3); }
 button.suggested-action {
-  color: white;
-  outline-color: rgba(255, 255, 255, 0.3);
+  color: #5d5854;
+  outline-color: rgba(93, 88, 84, 0.3);
   border-top-color: shade(#cecece, 0.8);
   border-right-color: shade(#cecece, 0.72);
   border-left-color: shade(#cecece, 0.72);
@@ -761,15 +761,15 @@ button.suggested-action {
     -gtk-icon-shadow: none;
     color: #fbd43b; }
   button.suggested-action:hover {
-    color: white;
-    outline-color: rgba(255, 255, 255, 0.3);
+    color: #5d5854;
+    outline-color: rgba(93, 88, 84, 0.3);
     border-color: #b38f04;
     background-image: linear-gradient(to bottom, shade(#fbd43b, 1.15), shade(#fbd43b, 1.07));
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.4); }
   button.suggested-action:active,
   button.suggested-action:checked {
-    color: white;
-    outline-color: rgba(255, 255, 255, 0.3);
+    color: #5d5854;
+    outline-color: rgba(93, 88, 84, 0.3);
     border-color: #b38f04;
     background-image: linear-gradient(to bottom, shade(shade(#fbd43b, 0.85), 1.05), shade(shade(#fbd43b, 0.85), 0.97));
     box-shadow: inset 0 2px 1px -2px rgba(0, 0, 0, 0.6); }
@@ -786,7 +786,7 @@ button.suggested-action {
     button.suggested-action:backdrop,
     button.suggested-action.flat:backdrop label,
     button.suggested-action.flat:backdrop {
-      color: #fef6d8; }
+      color: #7d714f; }
     .selection-mode button.titlebutton:backdrop:active, .selection-mode button.titlebutton:backdrop:checked,
     button.suggested-action:backdrop:active,
     button.suggested-action:backdrop:checked,
@@ -804,7 +804,7 @@ button.suggested-action {
       button.suggested-action.flat:backdrop:active,
       button.suggested-action.flat:backdrop:checked label,
       button.suggested-action.flat:backdrop:checked {
-        color: #fef4ce; }
+        color: #7c6f45; }
     .selection-mode button.titlebutton:backdrop:disabled,
     button.suggested-action:backdrop:disabled,
     button.suggested-action.flat:backdrop:disabled {
@@ -832,7 +832,7 @@ button.suggested-action {
         button.suggested-action:backdrop:disabled:checked label,
         button.suggested-action.flat:backdrop:disabled:active label,
         button.suggested-action.flat:backdrop:disabled:checked label {
-          color: #fce382; }
+          color: #c3a946; }
   .selection-mode button.titlebutton:backdrop, .selection-mode button.titlebutton:disabled, .selection-mode button.titlebutton:backdrop:disabled,
   button.suggested-action.flat:backdrop,
   button.suggested-action.flat:disabled,
@@ -852,7 +852,7 @@ button.suggested-action {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     button.suggested-action:disabled label,
     button.suggested-action:disabled {
-      color: #fdedac; }
+      color: #ac9956; }
     button.suggested-action:disabled:active,
     button.suggested-action:disabled:checked {
       border-color: #b38f04;
@@ -862,7 +862,7 @@ button.suggested-action {
       button.suggested-action:disabled:active,
       button.suggested-action:disabled:checked label,
       button.suggested-action:disabled:checked {
-        color: #fdeeb2; }
+        color: #9c8a4c; }
   .osd
   button.suggested-action {
     color: #eeeeee;
@@ -1339,7 +1339,7 @@ button.color {
  *********/
 *:link, button:link,
 button:visited {
-  color: #2d71b8; }
+  color: #d0ab15; }
   *:link:visited,
   button:visited {
     color: #cca304; }
@@ -1348,13 +1348,13 @@ button:visited {
       color: #9c8a4a; }
   *:link:hover, button:hover:link,
   button:hover:visited {
-    color: #468ad2; }
+    color: #eac52e; }
     *:selected *:link:hover, *:selected button:hover:link,
     *:selected button:hover:visited {
       color: #6d6452; }
   *:link:active, button:active:link,
   button:active:visited {
-    color: #2d71b8; }
+    color: #d0ab15; }
     *:selected *:link:active, *:selected button:active:link,
     *:selected button:active:visited {
       color: #7d714f; }
