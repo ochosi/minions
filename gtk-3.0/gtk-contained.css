@@ -3670,7 +3670,7 @@ filechooserbutton:drop(active) {
  ***********/
 .sidebar {
   border-style: none;
-  background-color: #dae0e6;
+  background-color: #e6e4dd;
   -gtk-icon-style: regular; }
   .sidebar row,
   .sidebar treeview {
@@ -3679,7 +3679,7 @@ filechooserbutton:drop(active) {
     .sidebar row:selected, .sidebar row:selected:focus,
     .sidebar treeview:selected,
     .sidebar treeview:selected:focus {
-      background-image: linear-gradient(to bottom, shade(#dae0e6, 0.87), shade(#dae0e6, 0.95) 10%, shade(#dae0e6, 0.99) 92%, shade(#dae0e6, 0.92));
+      background-image: linear-gradient(to bottom, shade(#e6e4dd, 0.87), shade(#e6e4dd, 0.95) 10%, shade(#e6e4dd, 0.99) 92%, shade(#e6e4dd, 0.92));
       border-top: 1px solid shade(#e4e2e3, 0.85);
       border-bottom: 1px solid shade(#e4e2e3, 1.12); }
       .sidebar row:selected label, .sidebar row:selected:focus label,
