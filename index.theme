@@ -5,8 +5,8 @@ Comment=Minions and fluffy unicorns theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Greybird
-MetacityTheme=Greybird
+GtkTheme=Minions
+MetacityTheme=Minions
 IconTheme=Minions
 CursorTheme=DMZ-White
 ButtonLayout=:minimize,maximize,close
