@@ -4,20 +4,20 @@ Comment=Minions and fluffy unicorns
 Inherits=elementary-xfce-dark
 
 # KDE Specific Stuff
-#DisplayDepth=32
-#LinkOverlay=link_overlay
-#LockOverlay=lock_overlay
-#ZipOverlay=zip_overlay
-#DesktopDefault=48
-#DesktopSizes=16,22,32,48,64,72,96,128
-#ToolbarDefault=22
-#ToolbarSizes=16,22,32,48
-#MainToolbarDefault=22
-#MainToolbarSizes=16,22,32,48
-#SmallDefault=16
-#SmallSizes=16
-#PanelDefault=32
-#PanelSizes=16,22,32,48,64,72,96,128
+DisplayDepth=32
+LinkOverlay=link_overlay
+LockOverlay=lock_overlay
+ZipOverlay=zip_overlay
+DesktopDefault=48
+DesktopSizes=16,22,32,48,64,72,96,128
+ToolbarDefault=22
+ToolbarSizes=16,22,32,48
+MainToolbarDefault=22
+MainToolbarSizes=16,22,32,48
+SmallDefault=16
+SmallSizes=16
+PanelDefault=32
+PanelSizes=16,22,32,48,64,72,96,128
 
 # Directory list
 Directories=places/16,places/22,places/24,places/32,places/48,places/64,places/96,places/128
