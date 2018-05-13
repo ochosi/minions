@@ -1,7 +1,7 @@
 [Icon Theme]
 Name=Minions
 Comment=Minions and fluffy unicorns
-Inherits=elementary-xfce-dark
+Inherits=elementary-xfce-darker
 
 # KDE Specific Stuff
 DisplayDepth=32
