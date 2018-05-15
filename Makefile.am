@@ -50,6 +50,7 @@ activate:
 	sed -i "s/^button-icon=.*$$/button-icon=start-here/" ~/.config/xfce4/panel/whiskermenu-8.rc
 	xfconf-query -c xsettings -p /Net/IconThemeName -s "Minions"
 	xfconf-query -c xsettings -p /Net/ThemeName -s "Minions"
+	xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Unicorn"
 	xfce4-panel -r
 
 uninstall-hook:
