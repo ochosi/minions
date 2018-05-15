@@ -8,6 +8,7 @@
     display: ":0.0"
     default_theme: "Greybird"
     default_icon_theme: "elementary-xfce-dark"
+    default_cursor_theme: "Default"
     local_changes_bool: "{{local_changes|default(false)|bool}}"
     deactivate_bool: "{{deactivate|default(false)|bool}}"
     activate: "{{not deactivate_bool}}"
@@ -49,8 +50,15 @@
     - name: Set Minion theme
       shell: xfconf-query -c xsettings -p /Net/IconThemeName -s "Minions"
       when: activate
-    - name: Set default theme
+    - name: Set default icons
       shell: xfconf-query -c xsettings -p /Net/IconThemeName -s "{{default_icon_theme}}"
+      when: not activate
+
+    - name: Set Unicorn Cursor
+      shell: xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Unicorn"
+      when: activate
+    - name: Set default Cursors
+      shell: xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "{{default_cursor_theme}}"
       when: not activate
 
     - name: activate
