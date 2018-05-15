@@ -10,6 +10,7 @@ MOSTLYCLEANFILES = \
 
 themedir = $(datadir)/themes/Minions
 icondir = $(datadir)/icons/Minions
+cursordir = $(datadir)/icons/Unicorn
 SASS = sass
 
 all: clean compile
@@ -40,6 +41,7 @@ install-data-hook:
 	cp    $(srcdir)/index.theme		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/plank			$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/icons/places	$(DESTDIR)$(icondir)/
+	cp -r $(srcdir)/cursor			$(DESTDIR)$(cursordir)
 	cp    $(srcdir)/icon.theme      $(DESTDIR)$(icondir)/index.theme
 	gtk-update-icon-cache $(DESTDIR)$(icondir)
 
