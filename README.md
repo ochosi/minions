@@ -2,6 +2,7 @@
 <img title="Minions!" src="https://raw.githubusercontent.com/ochosi/minions/master/icons/places/64/start-here.png" />
 <img title="Minions!" src="https://raw.githubusercontent.com/ochosi/minions/master/palette.png" />
 This suite includes:
+
  * Minions Gtk+2/3 theme
  * Minions icon addon theme (requires elementary-xfce)
  * Unicorn cursor theme
