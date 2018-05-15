@@ -1,5 +1,6 @@
 # minions
-<img title="Minions!" src="https://raw.githubusercontent.com/ochosi/minions/improve_readme/icons/places/64/start-here.png" />
+<img title="Minions!" src="https://raw.githubusercontent.com/ochosi/minions/master/icons/places/64/start-here.png" />
+<img title="Minions!" src="https://raw.githubusercontent.com/ochosi/minions/master/palette.png" />
 Minions Gtk+ theme
 
 ## Ansible helper
