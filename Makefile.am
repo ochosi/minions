@@ -27,6 +27,7 @@ install-data-hook:
 	$(MKDIR_P)				$(DESTDIR)$(themedir)/gtk-3.0
 
 	$(MKDIR_P)				$(DESTDIR)$(icondir)
+	$(MKDIR_P)				$(DESTDIR)$(cursordir)
 
 	cp -r $(srcdir)/gtk-2.0			$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/gtk-3.0			$(DESTDIR)$(themedir)
@@ -40,8 +41,8 @@ install-data-hook:
 	cp -r $(srcdir)/xfwm4			$(DESTDIR)$(themedir)
 	cp    $(srcdir)/index.theme		$(DESTDIR)$(themedir)
 	cp -r $(srcdir)/plank			$(DESTDIR)$(themedir)
-	cp -r $(srcdir)/icons/places	$(DESTDIR)$(icondir)/
-	cp -r $(srcdir)/cursor			$(DESTDIR)$(cursordir)
+	cp -r $(srcdir)/icons/places		$(DESTDIR)$(icondir)/
+	cp -r $(srcdir)/cursor/*		$(DESTDIR)$(cursordir)
 	cp    $(srcdir)/icon.theme      $(DESTDIR)$(icondir)/index.theme
 	gtk-update-icon-cache $(DESTDIR)$(icondir)
 
