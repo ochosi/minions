@@ -3,7 +3,6 @@
   hosts: all
 
   vars:
-    git_dir: "/home/{{ ansible_user_id }}/git/minions"
     config_file: "~/.config/xfce4/panel/whiskermenu-8.rc"
     display: ":0.0"
     default_theme: "Greybird"
@@ -13,19 +12,12 @@
     deactivate_bool: "{{deactivate|default(false)|bool}}"
     activate: "{{not deactivate_bool}}"
   tasks:
-    - name: get code
-      git:
-        dest: "{{ git_dir }}"
-        repo: 'https://github.com/ochosi/minions.git'
-      when: activate and not local_changes_bool
     - name: compile
       shell: ./autogen.sh && make
-      args:
-        chdir: "{{git_dir}}"
       when: activate
     - name: install
       become: true
-      shell: "make -C {{git_dir}} install"
+      shell: "make install"
       when: activate
     - name: Set whiskermenu to Minion
       lineinfile:
