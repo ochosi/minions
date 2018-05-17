@@ -1,6 +1,6 @@
 ---
 - name: "Test Minions"
-  hosts: all
+  hosts: localhost
 
   vars:
     config_file: "~/.config/xfce4/panel/whiskermenu-8.rc"
