@@ -12,6 +12,10 @@
     deactivate_bool: "{{deactivate|default(false)|bool}}"
     activate: "{{not deactivate_bool}}"
   tasks:
+    - name: install dependencies
+      become: true
+      apt:
+        name: ruby-sass,build-essential
     - name: compile
       shell: ./autogen.sh && make
       when: activate
