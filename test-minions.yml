@@ -15,7 +15,7 @@
     - name: install dependencies
       become: true
       apt:
-        name: ruby-sass,build-essential
+        name: ruby-sass,build-essential,libgdk-pixbuf2.0-dev,libxml2-utils
     - name: compile
       shell: ./autogen.sh && make
       when: activate
