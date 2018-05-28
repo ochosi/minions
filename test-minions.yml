@@ -3,7 +3,7 @@
   hosts: localhost
 
   vars:
-    config_file: "~/.config/xfce4/panel/whiskermenu-8.rc"
+    config_file: "~/.config/xfce4/panel/whiskermenu-*.rc"
     display: ":0.0"
     default_theme: "Greybird"
     default_icon_theme: "elementary-xfce-dark"
@@ -11,51 +11,64 @@
     local_changes_bool: "{{local_changes|default(false)|bool}}"
     deactivate_bool: "{{deactivate|default(false)|bool}}"
     activate: "{{not deactivate_bool}}"
+  pre_tasks:
+    - name: Verify Ansible version requirements.
+      assert:
+        that: "ansible_version.full | version_compare('2.4', '>=')"
+        msg: >
+          "You must update Ansible to at least 2.4 to use this playbook."
   tasks:
     - name: install dependencies
       become: true
       apt:
-        name: ruby-sass,build-essential,libgdk-pixbuf2.0-dev,libxml2-utils
+        name: ruby-sass,build-essential,libgdk-pixbuf2.0-dev,libxml2-utils,automake
     - name: compile
-      shell: ./autogen.sh && make
       when: activate
+      shell: ./autogen.sh && make
     - name: install
+      when: activate
       become: true
       shell: "make install"
-      when: activate
+
+    - name: Find whiskermenu configfile
+      find:
+        paths: "{{ config_file }}"
+      register: config_files
     - name: Set whiskermenu to Minion
+      when: activate
       lineinfile:
-        path: "{{config_file}}"
+        path: "{{item.path}}"
         regexp: '^button-icon=.*$'
         line: 'button-icon=start-here'
-      when: activate
+      with_items: "{{ config_files.files }}"
     - name: Set whiskermenu to default
+      when: not activate
       lineinfile:
-        path: "{{config_file}}"
+        path: "{{item.path}}"
         regexp: '^button-icon=.*$'
         line: 'button-icon=xubuntu-logo-menu'
-      when: not activate
+      with_items: "{{ config_files.files }}"
 
     - name: Set Minion theme
+      when: activate
       shell: xfconf-query -c xsettings -p /Net/ThemeName -s "Minions"
-      when: activate
     - name: Set default theme
-      shell: xfconf-query -c xsettings -p /Net/ThemeName -s "{{default_theme}}"
       when: not activate
+      shell: xfconf-query -c xsettings -p /Net/ThemeName -s "{{default_theme}}"
 
     - name: Set Minion theme
-      shell: xfconf-query -c xsettings -p /Net/IconThemeName -s "Minions"
       when: activate
+      shell: xfconf-query -c xsettings -p /Net/IconThemeName -s "Minions"
     - name: Set default icons
-      shell: xfconf-query -c xsettings -p /Net/IconThemeName -s "{{default_icon_theme}}"
       when: not activate
+      shell: xfconf-query -c xsettings -p /Net/IconThemeName -s "{{default_icon_theme}}"
 
     - name: Set Unicorn Cursor
-      shell: xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Unicorn"
       when: activate
+      shell: xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Unicorn"
     - name: Set default Cursors
-      shell: xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "{{default_cursor_theme}}"
       when: not activate
+      shell: xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "{{default_cursor_theme}}"
 
     - name: activate
       shell: xfce4-panel -r
