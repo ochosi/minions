@@ -3,7 +3,8 @@
   hosts: localhost
 
   vars:
-    config_file: "~/.config/xfce4/panel/whiskermenu-*.rc"
+    config_path: "~/.config/xfce4/panel"
+    config_file: "whiskermenu-*.rc"
     display: ":0.0"
     default_theme: "Greybird"
     default_icon_theme: "elementary-xfce-dark"
@@ -32,7 +33,8 @@
 
     - name: Find whiskermenu configfile
       find:
-        paths: "{{ config_file }}"
+        paths: "{{config_path}}"
+        patterns: "{{ config_file }}"
       register: config_files
     - name: Set whiskermenu to Minion
       when: activate
