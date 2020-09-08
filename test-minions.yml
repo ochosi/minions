@@ -12,6 +12,7 @@
     local_changes_bool: "{{local_changes|default(false)|bool}}"
     deactivate_bool: "{{deactivate|default(false)|bool}}"
     activate: "{{not deactivate_bool}}"
+    ansible_python_interpreter: /usr/bin/python
   pre_tasks:
     - name: Verify Ansible version requirements.
       assert:
@@ -19,10 +20,18 @@
         msg: >
           "You must update Ansible to at least 2.5 to use this playbook."
   tasks:
-    - name: install dependencies
+    - name: install ubuntu dependencies
+      when: ansible_distribution == "Ubuntu"
       become: true
-      apt:
+      package:
         name: ruby-sass,build-essential,libgdk-pixbuf2.0-dev,libxml2-utils,automake
+        state: present
+    - name: install fedora dependencies
+      when: ansible_distribution == "Fedora"
+      become: true
+      package:
+        name: rubygem-sass,make,automake,gcc,gcc-c++,gdk-pixbuf2-devel
+        state: present
     - name: compile
       when: activate
       shell: ./autogen.sh && make
